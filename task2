@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <math.h>
+
+int is_simple(long int number) 
+{
+  if (number > 1)
+  {
+    for(int x = 2; x < number; x++)
+    {
+      if (number % x == 0)
+      {
+
+        return 0;
+      }   
+    }
+    
+  return 1;  
+  }
+  else
+  {
+    printf("the_number_you_entered_is_neither_composite_nor_simple.\n");
+  }
+  
+  return 0;
+}
+
+int main(void)
+{
+  long int number;
+  printf("enter_the_number: ");
+  scanf("%li", &number);
+  printf("%d", is_simple(number));
+}
